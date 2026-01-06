@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Configuración Dotación";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // ajusta si tu layout se llama distinto
+}
+
+<h3>Configuración de Dotación</h3>
+<hr />
+
+@if (TempData["Ok"] != null)
+{
+    <div class="alert alert-success">@TempData["Ok"]</div>
+}
+
+<div class="row g-3">
+    <div class="col-md-6">
+        <a class="btn btn-primary w-100"
+           href="@Url.Action("TipoPersonal", "ConfiguracionDotacion")">
+            Configurar por Tipo de Personal
+        </a>
+    </div>
+
+    <div class="col-md-6">
+        <a class="btn btn-outline-primary w-100"
+           href="@Url.Action("TipoArea", "ConfiguracionDotacion")">
+            Configurar por Área
+        </a>
+    </div>
+</div>
